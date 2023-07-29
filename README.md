@@ -1,8 +1,8 @@
-#Creación de programa capaz de resolver ecuaciones cuadráticas de segundo grado para hallar X1 y X2. 
+# Creación de programa capaz de resolver ecuaciones cuadráticas de segundo grado para hallar X1 y X2. 
 
 X1 = ( -b + √b² - 4ac ) / 2a. 
 
-#Descripción de las variables/datos (Ítem 1) 
+# Descripción de las variables/datos (Ítem 1) 
 
 - a: coeficiente cuadrático de la ecuación 
 
@@ -29,12 +29,12 @@ X1 = ( -b + √b² - 4ac ) / 2a.
 - X2: Valor de X1, resultado de calcular (-b) - (√b**2 - 4 * a * c) o lo que es lo mismo (temp_2 / (2 * dato_a)) 
 
  
-#Tipos de datos. 
+# Tipos de datos. 
 
 - Tipo de datos: float (para los coeficientes y raíces), int (para el discriminante y valores ingresados por el usuario). 
 
  
-#Inicio del Programa. 
+# Inicio del Programa. 
 
 Como primer paso importamos las librerías que usaremos en este caso math y también podemos hacer uso de numpy, por lo que también la importaremos, en este ejemplo observamos que siempre al empezar un proyecto es recomendable como primer paso importar todas librerías a usar. 
 
@@ -44,7 +44,7 @@ import numpy as np
 
  
 
-#Bienvenida al usuario. 
+## Bienvenida al usuario. 
 
 En este caso daremos una bienvenida al usuario y le indicaremos para que funcione el programa, haciendo uso del siguiente print. 
 
@@ -52,7 +52,7 @@ print("Calculadora de ecuaciones cuadráticas de segundo grado")
 
  
 
-#Datos. 
+## Datos. 
 
 Crearemos un array donde le pediremos al usuario que "Ingrese al menos 5 valores enteros (excepto 0) separados por espacios: ", estos 5 valores serán alojados en un array con la función "split", esta función separa los valores con espacios en blanco (Puede ser separado con cualquier otro string si se lo especificamos) y luego con la función ".sort" se ordenara de menor a mayor valor. 
 
@@ -93,7 +93,7 @@ datos = np.array(["El valor de A es", dato_a, "El valor de B es", dato_b, "El va
 print(datos) 
 
 
-#Variable AUX. 
+## Variable AUX. 
 
 A partir de los datos seleccionados realizaremos la operación pertinente, en este caso calcularemos el componente b**2 - 4ac, este lo alojaremos en la variable "aux", por ahora no será necesario mostrar este resultado en pantalla, pero si así lo que quisiéramos no tendríamos problemas. 
 
@@ -115,7 +115,7 @@ if aux < 0:
 
  
 
-#Verificadores de aux 
+## Verificadores de aux 
 
 En caso de que el discriminante sea igual a 0 solo se calculara el valor de X1 a partir de la siguiente formula (-(dato_b) / (2* (dato_a))) usando la función de if, donde si aux es igual a 0 se aplicara esto. 
 
@@ -133,7 +133,7 @@ else:
 
  
 
-#Raíz de AUX 
+## Raíz de AUX 
 
 Este valor lo alojaremos en la variable aux_2 y lo usaremos al momento de realizar el cálculo final. 
 
@@ -165,7 +165,7 @@ print(opcion_4)
 
  
 
-#Valor de temp_1 
+## Valor de temp_1 
 
 Ahora calcularemos el valor de una nueva variable, está la llamaremos "temp_1", en ella almacenaremos el resultado de la siguiente operación ( - (dato_b) + (aux_2)). 
 
@@ -177,7 +177,7 @@ print("el valor de temp_1 es: " + str(temp_1))
 
  
 
-#Valor de temp_2 
+## Valor de temp_2 
 
 Ahora calcularemos el valor de "temp_2" que usaremos para encontrar x2 usando la siguiente operación ( - (dato_b) - (aux_2)). 
 
@@ -188,7 +188,7 @@ temp_2 = (-(dato_b)) - (aux_2)
 print("el valor de temp_2 es: " + str(temp_2)) 
 
 
-#Valor de X1 y X2   
+## Valor de X1 y X2   
 
 En el siguiente paso calcularemos el valor final de las variables "x1" y "x2", las calculamos a partir de (x1 = temp_1 / (2*a)) y (x2 = temp_2 / (2*a)) respectivamente, estas las usaremos en el cierre del programa.  
 
@@ -200,7 +200,7 @@ print(x1)
 
 print(x2) 
 
-#Programa completo 
+## Programa completo 
 
 Ya habiendo realizado todos los pasos anteriores podremos realizar nuestro código completo. pero antes debemos diagramarlo de la siguiente manera para que funcione correctamente. 
 
